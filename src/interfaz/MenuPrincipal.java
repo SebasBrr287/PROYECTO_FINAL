@@ -315,12 +315,6 @@ public class MenuPrincipal {
                         criterio = "Menos caminata";
                     }
 
-                    if (pasajero.yaRecorrioConCriterio(ruta, criterio)) {
-                        System.out.println("\nYa generaste y registraste la ruta [" + ruta.getCodigoLinea()
-                                + "] con el criterio '" + criterio + "'. No se puede repetir dos veces.");
-                        break;
-                    }
-
                     ultimoItinerario = gestorPlanificacion.generarItinerarioOptimo(ruta, criterio);
                     pasajero.registrarRutaRecorrida(ruta, criterio);
 
