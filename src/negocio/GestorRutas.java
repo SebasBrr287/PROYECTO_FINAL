@@ -92,7 +92,7 @@ public class GestorRutas {
         for (Ruta r : rutas) {
             resultado += "[" + r.getCodigoLinea() + "] "
                     + r.getNombre() + " (" + r.getSectorOrigen() + " -> " + r.getSectorDestino() + ")"
-                    + " - Estado: " + r.getEstado() + "\n";
+                    + " | Estado: " + r.getEstado() + "\n";
         }
         return resultado;
     }

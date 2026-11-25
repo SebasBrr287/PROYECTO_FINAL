@@ -413,15 +413,15 @@ public class MenuPrincipal {
             System.out.println((i + 1) + ". " + rf.getNombrePersonalizado() + " (Guardada: " + rf.getFechaGuardado() + ")");
             for (Itinerario it : pasajero.consultarItinerarios(rf)) {
                 System.out.println("   - " + it.getOrigen() + " -> " + it.getDestino()
-                        + " | Criterio: " + it.getCriterioOptimizacion()
-                        + " | Duración: " + it.getDuracionEstimadaMin() + " min"
-                        + " | Costo perfil: $" + String.format("%.2f", it.calcularCostoTotal(pasajero.getPerfilTarifario())));
+                        + "\nCriterio: " + it.getCriterioOptimizacion()
+                        + "\nDuración: " + it.getDuracionEstimadaMin() + " min"
+                        + "\nCosto perfil: $" + String.format("%.2f", it.calcularCostoTotal(pasajero.getPerfilTarifario())));
             }
         }
 
         RutaFavorita ultima = pasajero.consultarUltimaRutaFavorita();
         if (ultima != null) {
-            System.out.println("Última ruta favorita agregada: " + ultima.getNombrePersonalizado());
+            System.out.println("\nÚltima ruta favorita agregada: " + ultima.getNombrePersonalizado());
         }
     }
 
